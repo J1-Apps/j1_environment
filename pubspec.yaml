@@ -1,0 +1,38 @@
+name: j1_environment
+description: "An environment for the J1 apps."
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  j1_crash_handler:
+    git:
+      url: https://github.com/J1-Apps/j1_crash_handler.git
+      ref: v1.0.0
+
+  j1_logger:
+    git:
+      url: https://github.com/J1-Apps/j1_logger.git
+      ref: v1.1.0
+
+  j1_router:
+    git:
+      url: https://github.com/J1-Apps/j1_router.git
+      ref: v1.0.1
+
+  get_it: ^7.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  j1_lints:
+    git:
+      url: https://github.com/J1-Apps/j1_lints.git
+      ref: v1.0.0
