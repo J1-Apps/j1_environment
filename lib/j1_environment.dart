@@ -10,10 +10,17 @@ import "package:j1_router/j1_router.dart";
 final locator = GetIt.instance;
 
 abstract class J1Environment {
-  FirebaseOptions? get firebaseOptions;
-  J1CrashHandler get crashHandler;
-  J1Logger get logger;
-  J1Router get router;
+  final FirebaseOptions? firebaseOptions;
+  final J1CrashHandler crashHandler;
+  final J1Logger logger;
+  final J1Router router;
+
+  const J1Environment({
+    required this.firebaseOptions,
+    required this.crashHandler,
+    required this.logger,
+    required this.router,
+  });
 
   Future<void> configure() async {
     if (firebaseOptions != null) {
